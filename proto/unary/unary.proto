@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package unary_service;
+//option은 output 파일 경로를 지정할 때 사용합니다.
+option go_package = "./unary_service";
+
+service UnaryService {
+  // Unary RPC: 클라이언트가 단일 요청을 보내고 서버가 단일 응답을 반환합니다.
+  rpc UnaryCall(UnaryRequest) returns (UnaryResponse) {}
+}
+
+message UnaryRequest {
+  string message = 1;
+}
+
+message UnaryResponse {
+  string message = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package client_stream;
+option go_package = "./client_service";
+
+service ClientService {
+  // Client streaming RPC: 클라이언트가 여러 요청을 스트림으로 보내고 서버가 단일 응답을 반환합니다.
+  rpc ClientStreamingCall(stream StreamingRequest) returns (StreamingResponse) {}
+}
+
+message StreamingRequest {
+  string message = 1;
+}
+
+message StreamingResponse {
+  string message = 1;
+}
