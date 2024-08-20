@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.20.3
-// source: client_stream/client_stream.proto
+// source: clientrpc/clientrpc.proto
 
-package client_service
+package clientrpc
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	ClientService_ClientStreamingCall_FullMethodName = "/client_stream.ClientService/ClientStreamingCall"
+	ClientService_ClientStreamingCall_FullMethodName = "/clientrpc.ClientService/ClientStreamingCall"
 )
 
 // ClientServiceClient is the client API for ClientService service.
@@ -102,7 +102,7 @@ type ClientService_ClientStreamingCallServer = grpc.ClientStreamingServer[Stream
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ClientService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "client_stream.ClientService",
+	ServiceName: "clientrpc.ClientService",
 	HandlerType: (*ClientServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -112,5 +112,5 @@ var ClientService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "client_stream/client_stream.proto",
+	Metadata: "clientrpc/clientrpc.proto",
 }

@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.34.2
 // 	protoc        v3.20.3
-// source: unary/unary.proto
+// source: unaryrpc/unaryrpc.proto
 
-package unary_service
+package unaryrpc
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ type UnaryRequest struct {
 func (x *UnaryRequest) Reset() {
 	*x = UnaryRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_unary_unary_proto_msgTypes[0]
+		mi := &file_unaryrpc_unaryrpc_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *UnaryRequest) String() string {
 func (*UnaryRequest) ProtoMessage() {}
 
 func (x *UnaryRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_unary_unary_proto_msgTypes[0]
+	mi := &file_unaryrpc_unaryrpc_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *UnaryRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnaryRequest.ProtoReflect.Descriptor instead.
 func (*UnaryRequest) Descriptor() ([]byte, []int) {
-	return file_unary_unary_proto_rawDescGZIP(), []int{0}
+	return file_unaryrpc_unaryrpc_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UnaryRequest) GetMessage() string {
@@ -78,7 +78,7 @@ type UnaryResponse struct {
 func (x *UnaryResponse) Reset() {
 	*x = UnaryResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_unary_unary_proto_msgTypes[1]
+		mi := &file_unaryrpc_unaryrpc_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -91,7 +91,7 @@ func (x *UnaryResponse) String() string {
 func (*UnaryResponse) ProtoMessage() {}
 
 func (x *UnaryResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_unary_unary_proto_msgTypes[1]
+	mi := &file_unaryrpc_unaryrpc_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -104,7 +104,7 @@ func (x *UnaryResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnaryResponse.ProtoReflect.Descriptor instead.
 func (*UnaryResponse) Descriptor() ([]byte, []int) {
-	return file_unary_unary_proto_rawDescGZIP(), []int{1}
+	return file_unaryrpc_unaryrpc_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *UnaryResponse) GetMessage() string {
@@ -114,46 +114,45 @@ func (x *UnaryResponse) GetMessage() string {
 	return ""
 }
 
-var File_unary_unary_proto protoreflect.FileDescriptor
+var File_unaryrpc_unaryrpc_proto protoreflect.FileDescriptor
 
-var file_unary_unary_proto_rawDesc = []byte{
-	0x0a, 0x11, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x2f, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x12, 0x0d, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x22, 0x28, 0x0a, 0x0c, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x29, 0x0a, 0x0d,
-	0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a,
-	0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07,
-	0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x32, 0x58, 0x0a, 0x0c, 0x55, 0x6e, 0x61, 0x72, 0x79,
-	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x48, 0x0a, 0x09, 0x55, 0x6e, 0x61, 0x72, 0x79,
-	0x43, 0x61, 0x6c, 0x6c, 0x12, 0x1b, 0x2e, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x5f, 0x73, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x2e, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x1c, 0x2e, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x2e, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x42, 0x11, 0x5a, 0x0f, 0x2e, 0x2f, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x5f, 0x73, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_unaryrpc_unaryrpc_proto_rawDesc = []byte{
+	0x0a, 0x17, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x72, 0x70, 0x63, 0x2f, 0x75, 0x6e, 0x61, 0x72, 0x79,
+	0x72, 0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x75, 0x6e, 0x61, 0x72, 0x79,
+	0x72, 0x70, 0x63, 0x22, 0x28, 0x0a, 0x0c, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x29, 0x0a,
+	0x0d, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18,
+	0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x32, 0x4e, 0x0a, 0x0c, 0x55, 0x6e, 0x61, 0x72,
+	0x79, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3e, 0x0a, 0x09, 0x55, 0x6e, 0x61, 0x72,
+	0x79, 0x43, 0x61, 0x6c, 0x6c, 0x12, 0x16, 0x2e, 0x75, 0x6e, 0x61, 0x72, 0x79, 0x72, 0x70, 0x63,
+	0x2e, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e,
+	0x75, 0x6e, 0x61, 0x72, 0x79, 0x72, 0x70, 0x63, 0x2e, 0x55, 0x6e, 0x61, 0x72, 0x79, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x0c, 0x5a, 0x0a, 0x2e, 0x2f, 0x75, 0x6e,
+	0x61, 0x72, 0x79, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_unary_unary_proto_rawDescOnce sync.Once
-	file_unary_unary_proto_rawDescData = file_unary_unary_proto_rawDesc
+	file_unaryrpc_unaryrpc_proto_rawDescOnce sync.Once
+	file_unaryrpc_unaryrpc_proto_rawDescData = file_unaryrpc_unaryrpc_proto_rawDesc
 )
 
-func file_unary_unary_proto_rawDescGZIP() []byte {
-	file_unary_unary_proto_rawDescOnce.Do(func() {
-		file_unary_unary_proto_rawDescData = protoimpl.X.CompressGZIP(file_unary_unary_proto_rawDescData)
+func file_unaryrpc_unaryrpc_proto_rawDescGZIP() []byte {
+	file_unaryrpc_unaryrpc_proto_rawDescOnce.Do(func() {
+		file_unaryrpc_unaryrpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_unaryrpc_unaryrpc_proto_rawDescData)
 	})
-	return file_unary_unary_proto_rawDescData
+	return file_unaryrpc_unaryrpc_proto_rawDescData
 }
 
-var file_unary_unary_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_unary_unary_proto_goTypes = []any{
-	(*UnaryRequest)(nil),  // 0: unary_service.UnaryRequest
-	(*UnaryResponse)(nil), // 1: unary_service.UnaryResponse
+var file_unaryrpc_unaryrpc_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_unaryrpc_unaryrpc_proto_goTypes = []any{
+	(*UnaryRequest)(nil),  // 0: unaryrpc.UnaryRequest
+	(*UnaryResponse)(nil), // 1: unaryrpc.UnaryResponse
 }
-var file_unary_unary_proto_depIdxs = []int32{
-	0, // 0: unary_service.UnaryService.UnaryCall:input_type -> unary_service.UnaryRequest
-	1, // 1: unary_service.UnaryService.UnaryCall:output_type -> unary_service.UnaryResponse
+var file_unaryrpc_unaryrpc_proto_depIdxs = []int32{
+	0, // 0: unaryrpc.UnaryService.UnaryCall:input_type -> unaryrpc.UnaryRequest
+	1, // 1: unaryrpc.UnaryService.UnaryCall:output_type -> unaryrpc.UnaryResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -161,13 +160,13 @@ var file_unary_unary_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_unary_unary_proto_init() }
-func file_unary_unary_proto_init() {
-	if File_unary_unary_proto != nil {
+func init() { file_unaryrpc_unaryrpc_proto_init() }
+func file_unaryrpc_unaryrpc_proto_init() {
+	if File_unaryrpc_unaryrpc_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_unary_unary_proto_msgTypes[0].Exporter = func(v any, i int) any {
+		file_unaryrpc_unaryrpc_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*UnaryRequest); i {
 			case 0:
 				return &v.state
@@ -179,7 +178,7 @@ func file_unary_unary_proto_init() {
 				return nil
 			}
 		}
-		file_unary_unary_proto_msgTypes[1].Exporter = func(v any, i int) any {
+		file_unaryrpc_unaryrpc_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*UnaryResponse); i {
 			case 0:
 				return &v.state
@@ -196,18 +195,18 @@ func file_unary_unary_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_unary_unary_proto_rawDesc,
+			RawDescriptor: file_unaryrpc_unaryrpc_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_unary_unary_proto_goTypes,
-		DependencyIndexes: file_unary_unary_proto_depIdxs,
-		MessageInfos:      file_unary_unary_proto_msgTypes,
+		GoTypes:           file_unaryrpc_unaryrpc_proto_goTypes,
+		DependencyIndexes: file_unaryrpc_unaryrpc_proto_depIdxs,
+		MessageInfos:      file_unaryrpc_unaryrpc_proto_msgTypes,
 	}.Build()
-	File_unary_unary_proto = out.File
-	file_unary_unary_proto_rawDesc = nil
-	file_unary_unary_proto_goTypes = nil
-	file_unary_unary_proto_depIdxs = nil
+	File_unaryrpc_unaryrpc_proto = out.File
+	file_unaryrpc_unaryrpc_proto_rawDesc = nil
+	file_unaryrpc_unaryrpc_proto_goTypes = nil
+	file_unaryrpc_unaryrpc_proto_depIdxs = nil
 }

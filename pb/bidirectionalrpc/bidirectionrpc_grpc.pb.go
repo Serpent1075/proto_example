@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.20.3
-// source: bidirection_stream/bidirection_stream.proto
+// source: bidirectionrpc/bidirectionrpc.proto
 
-package bidirectional_service
+package bidirectionalrpc
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	BidirectionalService_BidirectionalStreamingCall_FullMethodName = "/bidirection_stream.BidirectionalService/BidirectionalStreamingCall"
+	BidirectionalService_BidirectionalStreamingCall_FullMethodName = "/bidirectionrpc.BidirectionalService/BidirectionalStreamingCall"
 )
 
 // BidirectionalServiceClient is the client API for BidirectionalService service.
@@ -102,7 +102,7 @@ type BidirectionalService_BidirectionalStreamingCallServer = grpc.BidiStreamingS
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BidirectionalService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bidirection_stream.BidirectionalService",
+	ServiceName: "bidirectionrpc.BidirectionalService",
 	HandlerType: (*BidirectionalServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -113,5 +113,5 @@ var BidirectionalService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "bidirection_stream/bidirection_stream.proto",
+	Metadata: "bidirectionrpc/bidirectionrpc.proto",
 }

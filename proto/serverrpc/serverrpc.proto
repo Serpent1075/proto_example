@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package server_stream;
-option go_package = "./server_stream";
+package serverrpc;
+option go_package = "./serverrpc";
 
 service ServerService {
    // Server streaming RPC: 클라이언트가 단일 요청을 보내고 서버가 여러 응답을 스트림으로 반환합니다.

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package bidirection_stream;
-option go_package = "./bidirectional_service";
+package bidirectionrpc;
+option go_package = "./bidirectionalrpc";
 
 service BidirectionalService {
 

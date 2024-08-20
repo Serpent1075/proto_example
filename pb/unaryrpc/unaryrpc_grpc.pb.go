@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.20.3
-// source: unary/unary.proto
+// source: unaryrpc/unaryrpc.proto
 
-package unary_service
+package unaryrpc
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	UnaryService_UnaryCall_FullMethodName = "/unary_service.UnaryService/UnaryCall"
+	UnaryService_UnaryCall_FullMethodName = "/unaryrpc.UnaryService/UnaryCall"
 )
 
 // UnaryServiceClient is the client API for UnaryService service.
@@ -110,7 +110,7 @@ func _UnaryService_UnaryCall_Handler(srv interface{}, ctx context.Context, dec f
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UnaryService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "unary_service.UnaryService",
+	ServiceName: "unaryrpc.UnaryService",
 	HandlerType: (*UnaryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -119,5 +119,5 @@ var UnaryService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "unary/unary.proto",
+	Metadata: "unaryrpc/unaryrpc.proto",
 }

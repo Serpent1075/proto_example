@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.20.3
-// source: server_stream/server_stream.proto
+// source: serverrpc/serverrpc.proto
 
-package server_stream
+package serverrpc
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	ServerService_ServerStreamingCall_FullMethodName = "/server_stream.ServerService/ServerStreamingCall"
+	ServerService_ServerStreamingCall_FullMethodName = "/serverrpc.ServerService/ServerStreamingCall"
 )
 
 // ServerServiceClient is the client API for ServerService service.
@@ -112,7 +112,7 @@ type ServerService_ServerStreamingCallServer = grpc.ServerStreamingServer[Stream
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ServerService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "server_stream.ServerService",
+	ServiceName: "serverrpc.ServerService",
 	HandlerType: (*ServerServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -122,5 +122,5 @@ var ServerService_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "server_stream/server_stream.proto",
+	Metadata: "serverrpc/serverrpc.proto",
 }
