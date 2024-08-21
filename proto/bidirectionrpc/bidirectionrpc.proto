@@ -1,12 +1,12 @@
 syntax = "proto3";
 
 package bidirectionrpc;
-option go_package = "./bidirectionalrpc";
+option go_package = "./bidirectionrpc";
 
-service BidirectionalService {
+service BidirectionService {
 
   // Bidirectional streaming RPC: 클라이언트와 서버가 모두 여러 메시지를 스트림으로 주고받습니다.
-  rpc BidirectionalStreamingCall(stream StreamingRequest) returns (stream StreamingResponse) {}
+  rpc BidirectionStreamingCall(stream StreamingRequest) returns (stream StreamingResponse) {}
 }
 
 
