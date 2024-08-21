@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package integragedrpc;
-option go_package = "./integragedrpc";
+package integratedrpc;
+option go_package = "./integratedrpc";
 
 service IntUnaryService {
   // Unary RPC: 클라이언트가 단일 요청을 보내고 서버가 단일 응답을 반환합니다.

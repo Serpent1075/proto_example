@@ -4,7 +4,7 @@
 // - protoc             v3.20.3
 // source: integratedrpc/integratedrpc.proto
 
-package integragedrpc
+package integratedrpc
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	IntUnaryService_UnaryCall_FullMethodName = "/integragedrpc.IntUnaryService/UnaryCall"
+	IntUnaryService_UnaryCall_FullMethodName = "/integratedrpc.IntUnaryService/UnaryCall"
 )
 
 // IntUnaryServiceClient is the client API for IntUnaryService service.
@@ -110,7 +110,7 @@ func _IntUnaryService_UnaryCall_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var IntUnaryService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "integragedrpc.IntUnaryService",
+	ServiceName: "integratedrpc.IntUnaryService",
 	HandlerType: (*IntUnaryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -123,7 +123,7 @@ var IntUnaryService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	IntClientService_ClientStreamingCall_FullMethodName = "/integragedrpc.IntClientService/ClientStreamingCall"
+	IntClientService_ClientStreamingCall_FullMethodName = "/integratedrpc.IntClientService/ClientStreamingCall"
 )
 
 // IntClientServiceClient is the client API for IntClientService service.
@@ -206,7 +206,7 @@ type IntClientService_ClientStreamingCallServer = grpc.ClientStreamingServer[Str
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var IntClientService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "integragedrpc.IntClientService",
+	ServiceName: "integratedrpc.IntClientService",
 	HandlerType: (*IntClientServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -220,7 +220,7 @@ var IntClientService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	IntServerService_ServerStreamingCall_FullMethodName = "/integragedrpc.IntServerService/ServerStreamingCall"
+	IntServerService_ServerStreamingCall_FullMethodName = "/integratedrpc.IntServerService/ServerStreamingCall"
 )
 
 // IntServerServiceClient is the client API for IntServerService service.
@@ -313,7 +313,7 @@ type IntServerService_ServerStreamingCallServer = grpc.ServerStreamingServer[Str
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var IntServerService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "integragedrpc.IntServerService",
+	ServiceName: "integratedrpc.IntServerService",
 	HandlerType: (*IntServerServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -327,7 +327,7 @@ var IntServerService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	IntBidirectionalService_BidirectionalStreamingCall_FullMethodName = "/integragedrpc.IntBidirectionalService/BidirectionalStreamingCall"
+	IntBidirectionalService_BidirectionalStreamingCall_FullMethodName = "/integratedrpc.IntBidirectionalService/BidirectionalStreamingCall"
 )
 
 // IntBidirectionalServiceClient is the client API for IntBidirectionalService service.
@@ -411,7 +411,7 @@ type IntBidirectionalService_BidirectionalStreamingCallServer = grpc.BidiStreami
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var IntBidirectionalService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "integragedrpc.IntBidirectionalService",
+	ServiceName: "integratedrpc.IntBidirectionalService",
 	HandlerType: (*IntBidirectionalServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
